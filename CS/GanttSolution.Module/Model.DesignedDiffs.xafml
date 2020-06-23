@@ -1,5 +1,33 @@
-﻿<?xml version="1.0" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Application Title="Ganttsolution">
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="20.1.4.0" IsNewNode="True" />
+  </SchemaModules>
   <Views>
+    <DetailView Id="Person_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="Person" RelativeSize="10.734463276836157" Direction="Vertical">
+            <LayoutGroup Id="Person_col1" RelativeSize="100" Direction="Horizontal">
+              <LayoutItem Id="FirstName" RelativeSize="50" Index="0" />
+              <LayoutItem Id="LastName" RelativeSize="50" Index="1" />
+              <LayoutItem Id="DisplayName" RelativeSize="53.10734463276836" Index="3" Removed="True" />
+              <LayoutItem Id="FullName" RelativeSize="69.491525423728817" Removed="True" />
+              <LayoutItem Id="MiddleName" RelativeSize="22.033898305084747" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="Person_col2" RelativeSize="66.615853658536579" Removed="True">
+              <LayoutItem Id="Address1" Index="0" RelativeSize="74.576271186440678" Removed="True" />
+              <LayoutItem Id="Address2" Index="0" RelativeSize="100" Removed="True" />
+              <LayoutItem Id="Birthday" Index="0" RelativeSize="49.717514124293785" Removed="True" />
+              <LayoutItem Id="Email" Removed="True" />
+            </LayoutGroup>
+            <LayoutItem Id="Photo" RelativeSize="33.384146341463413" Removed="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="Tasks_Group" Direction="Vertical" RelativeSize="89.265536723163848">
+            <LayoutItem Id="Tasks" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
   </Views>
 </Application>

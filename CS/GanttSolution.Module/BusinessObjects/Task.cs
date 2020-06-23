@@ -19,10 +19,19 @@ namespace GanttSolution.Module.BusinessObjects {
         public override void AfterConstruction() {
             base.AfterConstruction();
         }
+        Person taskPerson;
         private Task parent;
-        public Task Parent {
+        public Task Parent
+        {
             get { return parent; }
             set { SetPropertyValue(nameof(Parent), ref parent, value); }
+        }
+
+        [Association("Person-Tasks")]
+        public Person TaskPerson
+        {
+            get => taskPerson;
+            set => SetPropertyValue(nameof(TaskPerson), ref taskPerson, value);
         }
         private string name;
         public string Name {
@@ -64,6 +73,7 @@ namespace GanttSolution.Module.BusinessObjects {
             }
         }
 
+        //i-task 
         #region ITask
         [Browsable(false)]
         public ITask Id { get { return this; } }
